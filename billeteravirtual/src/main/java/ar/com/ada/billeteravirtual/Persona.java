@@ -17,13 +17,9 @@ public class Persona {
     private String dni;
     private int edad;
     private String email;
+    private Usuario usuario;
+    private int billeteraId;
 
-    public Persona(String nombre, String dni, int edad, String email) {
-        this.nombre = nombre;
-        this.dni = dni;
-        this.edad = edad;
-        this.email = email;
-    }
 
     public Persona() {
     }
@@ -71,6 +67,45 @@ public class Persona {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+     /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+        this.usuario.setPersona(this); //Vinculamos ambos objetos entre si
+    }
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public int getPesonaId() {
+        return pesonaId;
+    }
+
+    public void setPesonaId(int pesonaId) {
+        this.pesonaId = pesonaId;
+    }
+
+    public int getBilleteraId() {
+        return billeteraId;
+    }
+
+    public void setBilleteraId(int billeteraId) {
+        this.billeteraId = billeteraId;
+    }
+
+    public Persona(int pesonaId, String nombre, String dni, int edad, String email, Usuario usuario, int billeteraId) {
+        this.pesonaId = pesonaId;
+        this.nombre = nombre;
+        this.dni = dni;
+        this.edad = edad;
+        this.email = email;
+        this.usuario = usuario;
+        this.billeteraId = billeteraId;
     }
 
 }

@@ -73,4 +73,8 @@ public class Usuario {
 		this.personaID = personaID;
 	}
 
+
+	public void setPersona(Persona persona) {
+	}
+
 }
